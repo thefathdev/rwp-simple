@@ -1,0 +1,46 @@
+---
+const articles = [
+  {
+    title: "Pontianak Post",
+    description:
+      "Melihat Eksistensi Komunitas Remote Worker Pontianak, Jadi Wadah Bagi Pekerja Jarak Jauh",
+    href: "/",
+  },
+  {
+    title: "Pontinesia",
+    description: "Remote Worker Pontianak",
+    href: "/",
+  },
+  {
+    title: "Article 3",
+    description: "Lorem Ipsum",
+    href: "/",
+  },
+];
+---
+
+<section class="bg-primary">
+  <div class="px-8 2xl:max-w-7xl mx-auto py-6">
+    <div class="mt-6 space-y-2">
+      <div class="h-0.5 bg-secondary"></div>
+      <h3 class="text-secondary text-base font-medium">
+        <span>published</span>
+        <span class="font-bold">articles</span>
+      </h3>
+      <div class="h-1.5 bg-secondary"></div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 text-secondary gap-6 pt-2 mt-2">
+      {
+        articles.map((article) => (
+          <div class="relative">
+            <p class="italic text-2xl block font-bold">{article.title}</p>
+            <p class="text-sm leading-relaxed mt-6">{article.description}</p>
+            <a href={article.href} class="absolute inset-0">
+              <span class="sr-only">{article.title}</span>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
