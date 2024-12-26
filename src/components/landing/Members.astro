@@ -48,12 +48,12 @@ const members = [
     </div>
 
     <ul
-      class="mx-auto flex flex-col lg:flex-row text-left gap-3 items-start text-secondary mt-3"
+      class="mx-auto lg:flex grid grid-cols-2 lg:flex-row text-left gap-3 items-start text-secondary mt-3"
     >
       {
         members.map((template) => (
           <>
-            <li class="flow-root col-span-full h-full ">
+            <li class="flow-root col-span-full h-full max-lg:col-span-1">
               <a href={template.url}>
                 <div>
                   <p class="italic shrink-0 text-xs ">{template.title}</p>

@@ -4,12 +4,12 @@ const articles = [
     title: "Pontianak Post",
     description:
       "Melihat Eksistensi Komunitas Remote Worker Pontianak, Jadi Wadah Bagi Pekerja Jarak Jauh",
-    href: "/",
+    href: "https://pontianakpost.jawapos.com/for-her/1464945807/melihat-eksistensi-komunitas-remote-worker-pontianak-jadi-wadah-bagi-pekerja-jarak-jauh#:~:text=Remote%20Worker%20Pontianak%20adalah%20sebuah,%2C%20marketing%2C%20dan%20teknologi%20informasi.",
   },
   {
     title: "Pontinesia",
     description: "Remote Worker Pontianak",
-    href: "/",
+    href: "https://pontinesia.com/berita/remote-worker-pontianak",
   },
   {
     title: "Article 3",
@@ -32,10 +32,20 @@ const articles = [
     <div class="grid grid-cols-1 lg:grid-cols-3 text-secondary gap-6 pt-2 mt-2">
       {
         articles.map((article) => (
-          <div class="relative">
-            <p class="italic text-2xl block font-bold">{article.title}</p>
-            <p class="text-sm leading-relaxed mt-6">{article.description}</p>
-            <a href={article.href} class="absolute inset-0">
+          <div class="relative flex-col flex justify-between h-full">
+            <div>
+              <p class="italic text-2xl block font-bold">{article.title}</p>
+              <p class="text-sm leading-relaxed mt-6">{article.description}</p>
+            </div>
+            <div class="">
+              <p class="mt-3 text-base font-semibold">Read more &nbsp; ↗</p>
+            </div>
+            <a
+              href={article.href}
+              class="absolute inset-0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span class="sr-only">{article.title}</span>
             </a>
           </div>
