@@ -2,11 +2,21 @@
 import { Image } from "astro:assets";
 import BaseHead from "../components/BaseHead.astro";
 import noiseBg from "../assets/noise.jpg";
+
+// Astro props
+const { title } = Astro.props;
 ---
 
 <html lang="en" class="selection:bg-secondary selection:text-secondary">
   <head>
     <BaseHead />
+    {
+      title ? (
+        <title>{title} | Remote Worker Pontianak</title>
+      ) : (
+        <title>Remote Worker Pontianak</title>
+      )
+    }
   </head>
 
   <body class="bg-primary relative">
