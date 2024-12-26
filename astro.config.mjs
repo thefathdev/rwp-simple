@@ -1,13 +1,13 @@
-import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 
 import sitemap from "@astrojs/sitemap";
 export default defineConfig({
-   vite: {
+  vite: {
     plugins: [tailwindcss()],
   },
-  // add yur domain name here
-  site: 'https://lexingtonthemes.com',
+
+  site: "https://www.remoteworkerpnk.com/",
   compressHTML: true,
-  integrations: [sitemap()]
+  integrations: [sitemap()],
 });

@@ -1,7 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import BaseHead from "../components/BaseHead.astro";
-import noiseBg from "../assets/noise.jpg";
+import noiseBg from "../assets/noise.webp";
+import noiseBgMobile from "../assets/noise-mobile.webp";
 
 // Astro props
 const { title } = Astro.props;
@@ -20,18 +21,44 @@ const { title } = Astro.props;
   </head>
 
   <body class="bg-primary relative">
-    <div class="fixed inset-0">
-      <Image
-        src={noiseBg}
+    <div class="fixed inset-0 max-sm:hidden">
+      <img
+        src={noiseBg.src}
         alt=""
         class="absolute inset-0 w-full bg-cover max-sm:h-[100dvh] opacity-15 scale-150 max-sm:bg-contain"
+        loading="eager"
+        decoding="sync"
       />
-      <Image
-        src={noiseBg}
+      <img
+        src={noiseBg.src}
         alt=""
         class="absolute inset-0 w-full bg-cover max-sm:h-[100dvh] opacity-20 flip-combined max-sm:bg-contain"
+        loading="eager"
+        decoding="sync"
       />
     </div>
+
+    <div class="fixed inset-0 sm:hidden">
+      <Image
+        src={noiseBgMobile}
+        alt=""
+        class="absolute inset-0 w-full bg-cover max-sm:h-[100dvh] opacity-15 scale-150 max-sm:bg-contain"
+        loading="eager"
+        decoding="sync"
+        width={420}
+        height={900}
+      />
+      <Image
+        src={noiseBgMobile}
+        alt=""
+        class="absolute inset-0 w-full bg-cover max-sm:h-[100dvh] opacity-20 flip-combined max-sm:bg-contain"
+        loading="eager"
+        decoding="sync"
+        width={420}
+        height={900}
+      />
+    </div>
+
     <slot />
     <script src="https://unpkg.com/mailgo@0.12.2/dist/mailgo.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"

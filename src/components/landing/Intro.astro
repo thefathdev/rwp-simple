@@ -8,7 +8,14 @@ import introImage2 from "../../assets/intro-2.jpg";
   <div class="px-8 2xl:max-w-7xl mx-auto py-6">
     <div class="grid grid-cols-1 lg:grid-cols-4 text-secondary gap-6">
       <div class="text-base lg:col-start-2 leading-relaxed">
-        <Image src={introImage1} alt="" />
+        <Image
+          src={introImage1}
+          alt=""
+          width={350}
+          height={350}
+          loading="eager"
+          decoding="sync"
+        />
       </div>
       <p
         class="text-base lg:col-start-2 leading-relaxed _underline underline-offset-4"
@@ -16,7 +23,7 @@ import introImage2 from "../../assets/intro-2.jpg";
         Founded by <a href="/" class="underline">Surya Mahardika</a> in 2024,
       </p>
       <div class="text-base lg:col-start-4 leading-relaxed">
-        <Image src={introImage2} alt="" />
+        <Image src={introImage2} alt="" width={350} height={263} />
       </div>
       <p class="text-base lg:col-start-4 leading-relaxed">
         Remote Worker Pontianak (RWP) now becomes a community where active
